@@ -16,51 +16,37 @@ namespace C_Sharp_HW_05_Library_Anton_Golovash_08._10._2022
             chislitel = a;
             znamenatel = b;
         }
-        public static Fraction operator +(Fraction fr1, double fr2)
+        public static double operator +(Fraction fr1, double fr2)
         {
-            Fraction fraction = new Fraction
-                (fr1.chislitel + fr2, fr1.znamenatel + fr2.znamenatel);
-            return fraction;
+            return fr1.chislitel / fr1.znamenatel + fr2;
         }
-        public static Fraction operator + (Fraction fr1, Fraction fr2)
+        public static double operator +(Fraction fr1, Fraction fr2)
         {
-            Fraction fraction = new Fraction
-                (fr1.chislitel + fr2.chislitel, fr1.znamenatel + fr2.znamenatel);
-            return fraction;
+            return fr1.chislitel / fr1.znamenatel + fr2.chislitel / fr2.znamenatel;
         }
-        public static Fraction operator - (Fraction fr1, Fraction fr2)
+        public static double operator -(Fraction fr1, Fraction fr2)
         {
-            Fraction fraction = new Fraction
-                (fr1.chislitel - fr2.chislitel, fr1.znamenatel - fr2.znamenatel);
-            return fraction;
+            return fr1.chislitel / fr1.znamenatel - fr2.chislitel / fr2.znamenatel;
         }
-        public static Fraction operator *(Fraction fr1, int fr2)
+        public static double operator *(Fraction fr1, int fr2)
         {
-            Fraction returnFr = new Fraction
-                (fr1.chislitel * fr2, fr1.znamenatel * fr2);
-            return returnFr;
+            return fr1.chislitel / fr1.znamenatel * fr2;
         }
-        public static Fraction operator *(int fr1, Fraction fr2)
+        public static double operator *(int fr1, Fraction fr2)
         {
-            Fraction returnFr = new Fraction
-                (fr1 * fr2.chislitel, fr1 * fr2.znamenatel);
-            return returnFr;
+            return fr1 * (fr2.chislitel / fr2.znamenatel);
         }
-        public static Fraction operator * (Fraction fr1, Fraction fr2)
+        public static double operator *(Fraction fr1, Fraction fr2)
         {
-            Fraction fraction = new Fraction
-                (fr1.chislitel * fr2.chislitel, fr1.znamenatel * fr2.znamenatel);
-            return fraction;
+            return (fr1.chislitel / fr1.znamenatel) * (fr2.chislitel / fr2.znamenatel);
         }
-        public static Fraction operator / (Fraction fr1, Fraction fr2)
+        public static double operator /(Fraction fr1, Fraction fr2)
         {
-            Fraction fraction = new Fraction
-                (fr1.chislitel / fr2.chislitel, fr1.znamenatel / fr2.znamenatel);
-            return fraction;
+            return (fr1.chislitel / fr1.znamenatel) / (fr2.chislitel / fr2.znamenatel);
         }
         public static bool operator ==(Fraction fr1, Fraction fr2)
         {
-            if (fr1.chislitel == fr2.chislitel && fr1.znamenatel == fr2.znamenatel)
+            if (fr1.chislitel / fr1.znamenatel == fr2.chislitel / fr2.znamenatel)
             {
                 return true;
             }
@@ -71,7 +57,29 @@ namespace C_Sharp_HW_05_Library_Anton_Golovash_08._10._2022
         }
         public static bool operator !=(Fraction fr1, Fraction fr2)
         {
-            if (fr1.chislitel != fr2.chislitel || fr1.znamenatel != fr2.znamenatel)
+            if (fr1.chislitel / fr1.znamenatel != fr2.chislitel / fr2.znamenatel)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator <(Fraction fr1, Fraction fr2)
+        {
+            if (fr1.chislitel / fr1.znamenatel < fr2.chislitel / fr2.znamenatel)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator >(Fraction fr1, Fraction fr2)
+        {
+            if (fr1.chislitel / fr1.znamenatel > fr2.chislitel / fr2.znamenatel)
             {
                 return true;
             }
