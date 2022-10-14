@@ -46,9 +46,6 @@ namespace C_Sharp_HW_05_Library_Anton_Golovash_08._10._2022
                     tempNumber += number;
                 }
             }
-            Console.ReadLine();
-
         }
-
     }
 }
