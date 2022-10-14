@@ -12,8 +12,8 @@ namespace C_Sharp_HW_05_Anton_Golovash_08._10._2022
     {
         static void Main(string[] args)
         {
-            Class1.Parse("12 56, 84");
-
+            Class1.Parse("56 84");
+            Console.ReadLine();
             //Complex z = new Complex(1, 1);
             //Complex z1;
             //z1 = z - (z * z * z - 1) / (3 * z * z);
