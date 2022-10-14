@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using C_Sharp_HW_04_Library_Anton_Golovash_01._10._2022;
 using C_Sharp_HW_05_Library_Anton_Golovash_08._10._2022;
 
 namespace C_Sharp_HW_05_Anton_Golovash_08._10._2022
@@ -13,10 +12,12 @@ namespace C_Sharp_HW_05_Anton_Golovash_08._10._2022
     {
         static void Main(string[] args)
         {
-            Complex z = new Complex(1, 1);
-            Complex z1;
-            z1 = z - (z * z * z - 1) / (3 * z * z);
-            Console.WriteLine("z1 = {0}", z1);
+            Class1.Parse("12 56, 84");
+
+            //Complex z = new Complex(1, 1);
+            //Complex z1;
+            //z1 = z - (z * z * z - 1) / (3 * z * z);
+            //Console.WriteLine("z1 = {0}", z1);
 
             Fraction f = new Fraction(3, 4);
             int a = 10;
